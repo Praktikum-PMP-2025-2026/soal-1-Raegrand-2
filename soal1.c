@@ -129,19 +129,19 @@ void Print_top(List *P,  List *S, List *M){
         printf("PAGI %s %d %d\n", P->head->data.nama, P->head->data.id, P->head->data.score);
     }
     else{
-        printf("-\n");
+        printf("PAGI -\n");
     }
     if(S->head != NULL){
         printf("SIANG %s %d %d\n", S->head->data.nama, S->head->data.id, S->head->data.score);
     }
     else{
-        printf("-\n");
+        printf("SIANG -\n");
     }
     if(M->head != NULL){
         printf("MALAM %s %d %d\n", M->head->data.nama, M->head->data.id, M->head->data.score);
     }
     else{
-        printf("-\n");
+        printf("MALAM -\n");
     }
 }
 
