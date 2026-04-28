@@ -101,7 +101,7 @@ void List_insert(List *L, Penjaga *p){
                     inserted = 1;
                 }
                 else{// cheeck name
-                    printf("breakpoint 4\n");
+                    // printf("breakpoint 4\n");
                     if(strcmp(p->nama, curr->data.nama) < 0){// p better, insert before curr
                         if(curr == L->head){
                             L->head = newNode;
