@@ -44,11 +44,11 @@ void Insert_before(Node *curr, Node *new){
     if(curr->prev != NULL){
         curr->prev->next = new;// problem
     }
-    // printf("Breakpoint 2\n");
     curr->prev = new;
 }
 
 void Insert_after(Node *curr, Node *new){
+    // printf("Breakpoint 2\n");
     new->prev = curr;
     new->next = curr->next;
     if(curr->next != NULL){
@@ -118,6 +118,10 @@ void List_insert(List *L, Penjaga *p){
     }
     // printf("inserted = %d\n", inserted);
     if(inserted == 0){
+        curr = L->head;
+        while(curr->next != NULL){
+            curr = curr->next;
+        }
         curr->next = newNode;
         newNode->prev = curr;
     }
