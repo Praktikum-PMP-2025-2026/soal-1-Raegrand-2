@@ -10,7 +10,7 @@
 #include <stdlib.h>
 
 typedef struct Penjaga{
-    char nama [50];
+    char nama [30];
     int id;
     int score;
 } Penjaga;
@@ -72,7 +72,6 @@ void List_insert(List *L, Penjaga *p){
     newNode->next = NULL;
     newNode->prev = NULL;
     
-    
     Node *curr = L->head;
     if(L->size == 0){
         L->head = newNode;
@@ -126,9 +125,24 @@ void List_insert(List *L, Penjaga *p){
     L->size++;
 }
 void Print_top(List *P,  List *S, List *M){
-    printf("PAGI %s %d %d\n", P->head->data.nama, P->head->data.id, P->head->data.score);
-    printf("SIANG %s %d %d\n", S->head->data.nama, S->head->data.id, S->head->data.score);
-    printf("MALAM %s %d %d\n", M->head->data.nama, M->head->data.id, M->head->data.score);
+    if(P->head != NULL){
+        printf("PAGI %s %d %d\n", P->head->data.nama, P->head->data.id, P->head->data.score);
+    }
+    else{
+        printf("-\n");
+    }
+    if(S->head != NULL){
+        printf("SIANG %s %d %d\n", S->head->data.nama, S->head->data.id, S->head->data.score);
+    }
+    else{
+        printf("-\n");
+    }
+    if(M->head != NULL){
+        printf("MALAM %s %d %d\n", M->head->data.nama, M->head->data.id, M->head->data.score);
+    }
+    else{
+        printf("-\n");
+    }
 }
 
 void Print_list(List *L){
